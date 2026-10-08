@@ -1,0 +1,20 @@
+TPEF release — licensing notice
+
+Copyright (c) 2026 Carlos O. Rocha Ochoa
+
+This repository uses separate licenses according to material type.
+
+1. The Python source files in the scripts/ directory are distributed under
+   the MIT License. The complete terms appear in LICENSE-CODE.
+
+2. The derived datasets in data/, the RDF files in rdf/, and the repository
+   documentation are distributed under the Creative Commons Attribution 4.0
+   International License (CC BY 4.0). The notice and official legal-code link
+   appear in LICENSE-DATA.
+
+3. Copyright and database rights in the institutional glossaries used as
+   source material remain with their respective holders. The original glossary
+   definitions are not included in this release.
+
+Where a file contains an explicit licensing notice, that notice takes
+precedence for that file.

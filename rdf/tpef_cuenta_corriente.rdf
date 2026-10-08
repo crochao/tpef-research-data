@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/glosario_PA_BGP">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+    <dcterms:title xml:lang="es">Glosario financiero</dcterms:title>
+    <dcterms:publisher>Banco General de Panamá</dcterms:publisher>
+    <dcterms:spatial>PA</dcterms:spatial>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/cuenta_corriente">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">cuenta corriente</skos:prefLabel>
+    <skos:altLabel xml:lang="es-MX">cuenta de cheques</skos:altLabel>
+    <skos:altLabel xml:lang="es-CL">cuenta corriente bancaria</skos:altLabel>
+    <skos:altLabel xml:lang="es-MX">cuenta corriente bancaria</skos:altLabel>
+    <skos:definition xml:lang="es">Contrato entre una entidad financiera y una persona 
+        natural o jurídica mediante el cual el titular deposita dinero 
+        y puede disponer de él de forma inmediata, habitualmente a través 
+        de cheques, tarjeta de débito o transferencias.</skos:definition>
+    <skos:scopeNote xml:lang="es">'Cuenta de cheques' es la denominación característica 
+        de los recursos mexicanos (PNIF). 'Cuenta corriente bancaria' 
+        aparece en recursos chilenos (CMF, EST) y en BBVA México como 
+        precisión técnica. El resto del corpus hispanohablante usa 
+        'cuenta corriente' sin calificativo adicional.</skos:scopeNote>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/deposito_bancario"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/cuenta_corriente_remunerada"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/cheque"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/tarjeta_debito"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/cuenta_ahorro"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/sobregiro"/>
+    <dcterms:source rdf:resource="https://w3id.org/tpef/concepts/glosario_AR_BBV"/>
+    <dcterms:source rdf:resource="https://w3id.org/tpef/concepts/glosario_BO_BCB"/>
+    <dcterms:source rdf:resource="https://w3id.org/tpef/concepts/glosario_CL_CMF"/>
+    <dcterms:source rdf:resource="https://w3id.org/tpef/concepts/glosario_CL_EST"/>
+    <dcterms:source rdf:resource="https://w3id.org/tpef/concepts/glosario_CO_SFC"/>
+    <dcterms:source rdf:resource="https://w3id.org/tpef/concepts/glosario_EC_SBE"/>
+    <dcterms:source rdf:resource="https://w3id.org/tpef/concepts/glosario_ES_FPT"/>
+    <dcterms:source rdf:resource="https://w3id.org/tpef/concepts/glosario_MX_PNIF"/>
+    <dcterms:source rdf:resource="https://w3id.org/tpef/concepts/glosario_PA_BGP"/>
+    <dcterms:source rdf:resource="https://w3id.org/tpef/concepts/glosario_PY_BCP"/>
+    <dcterms:source rdf:resource="https://w3id.org/tpef/concepts/glosario_SV_SSF"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/cheque">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">cheque</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/tarjeta_debito">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">tarjeta de débito</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/sobregiro">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">sobregiro</skos:prefLabel>
+    <skos:altLabel xml:lang="es-ES">descubierto</skos:altLabel>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/glosario_CL_EST">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+    <dcterms:title xml:lang="es">Glosario financiero</dcterms:title>
+    <dcterms:publisher>Glossary — Chile (EST)</dcterms:publisher>
+    <dcterms:spatial>CL</dcterms:spatial>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/cuenta_corriente_remunerada">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">cuenta corriente remunerada</skos:prefLabel>
+    <skos:definition xml:lang="es">Modalidad de cuenta corriente que genera intereses 
+        sobre el saldo mantenido.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/cuenta_corriente"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/glosario_EC_SBE">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+    <dcterms:title xml:lang="es">Glosario financiero</dcterms:title>
+    <dcterms:publisher>Superintendencia de Bancos del Ecuador</dcterms:publisher>
+    <dcterms:spatial>EC</dcterms:spatial>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/glosario_PY_BCP">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+    <dcterms:title xml:lang="es">Glosario financiero</dcterms:title>
+    <dcterms:publisher>Banco Central del Paraguay</dcterms:publisher>
+    <dcterms:spatial>PY</dcterms:spatial>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label xml:lang="es">Tesauro Panhispánico de Educación Financiera (TPEF)</rdfs:label>
+    <rdfs:label xml:lang="en">Pan-Hispanic Financial Education Thesaurus (TPEF)</rdfs:label>
+    <dcterms:creator>Carlos O. Rocha Ochoa</dcterms:creator>
+    <dcterms:description xml:lang="en">Partial SKOS concept scheme illustrating diatopic 
+        denominative variation in the pan-Hispanic financial education 
+        thesaurus. Modelling example: cuenta corriente / cuenta de cheques.</dcterms:description>
+    <dcterms:language>es</dcterms:language>
+    <owl:versionInfo>0.1-example</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/glosario_MX_PNIF">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+    <dcterms:title xml:lang="es">Glosario — Plan Nacional de Inclusión Financiera</dcterms:title>
+    <dcterms:publisher>CONAIF — México</dcterms:publisher>
+    <dcterms:spatial>MX</dcterms:spatial>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/glosario_CL_CMF">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+    <dcterms:title xml:lang="es">Glosario</dcterms:title>
+    <dcterms:publisher>Comisión para el Mercado Financiero de Chile</dcterms:publisher>
+    <dcterms:spatial>CL</dcterms:spatial>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/glosario_CO_SFC">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+    <dcterms:title xml:lang="es">Glosario financiero</dcterms:title>
+    <dcterms:publisher>Superintendencia Financiera de Colombia</dcterms:publisher>
+    <dcterms:spatial>CO</dcterms:spatial>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/deposito_bancario">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">depósito bancario</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">bank deposit</skos:prefLabel>
+    <skos:definition xml:lang="es">Operación mediante la cual una persona entrega 
+        fondos a una entidad financiera para su custodia y 
+        administración.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:topConceptOf rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/glosario_BO_BCB">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+    <dcterms:title xml:lang="es">Glosario financiero</dcterms:title>
+    <dcterms:publisher>Banco Central de Bolivia</dcterms:publisher>
+    <dcterms:spatial>BO</dcterms:spatial>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/glosario_SV_SSF">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+    <dcterms:title xml:lang="es">Glosario financiero</dcterms:title>
+    <dcterms:publisher>Superintendencia del Sistema Financiero de El Salvador</dcterms:publisher>
+    <dcterms:spatial>SV</dcterms:spatial>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/glosario_ES_FPT">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+    <dcterms:title xml:lang="es">Glosario — Finanzas para todos</dcterms:title>
+    <dcterms:publisher>Banco de España / CNMV</dcterms:publisher>
+    <dcterms:spatial>ES</dcterms:spatial>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/cuenta_ahorro">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">cuenta de ahorro</skos:prefLabel>
+    <skos:altLabel xml:lang="es-419">cuenta de ahorros</skos:altLabel>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/glosario_AR_BBV">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+    <dcterms:title xml:lang="es">Conceptos de educación financiera</dcterms:title>
+    <dcterms:publisher>BBVA Argentina</dcterms:publisher>
+    <dcterms:spatial>AR</dcterms:spatial>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/EsquemaTPEF">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <skos:prefLabel xml:lang="es">Tesauro Panhispánico de Educación Financiera</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Pan-Hispanic Financial Education Thesaurus</skos:prefLabel>
+    <dcterms:creator>Carlos O. Rocha Ochoa</dcterms:creator>
+    <dcterms:description xml:lang="en">SKOS concept scheme for the pan-Hispanic 
+        financial education thesaurus, derived from a corpus of 57 
+        institutional glossaries from 18 Spanish-speaking countries.</dcterms:description>
+  </rdf:Description>
+</rdf:RDF>

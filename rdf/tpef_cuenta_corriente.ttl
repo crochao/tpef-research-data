@@ -1,0 +1,195 @@
+@prefix tpef:    <https://w3id.org/tpef/concepts/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+### ─── Ontology declaration ──────────────────────────────────────────────────
+
+<https://w3id.org/tpef/>
+    a owl:Ontology ;
+    rdfs:label "Tesauro Panhispánico de Educación Financiera (TPEF)"@es ;
+    rdfs:label "Pan-Hispanic Financial Education Thesaurus (TPEF)"@en ;
+    dcterms:creator "Carlos O. Rocha Ochoa" ;
+    dcterms:description """Partial SKOS concept scheme illustrating diatopic 
+        denominative variation in the pan-Hispanic financial education 
+        thesaurus. Modelling example: cuenta corriente / cuenta de cheques."""@en ;
+    dcterms:language "es" ;
+    owl:versionInfo "0.1-example" .
+
+### ─── Concept scheme ────────────────────────────────────────────────────────
+
+tpef:EsquemaTPEF
+    a skos:ConceptScheme ;
+    skos:prefLabel "Tesauro Panhispánico de Educación Financiera"@es ;
+    skos:prefLabel "Pan-Hispanic Financial Education Thesaurus"@en ;
+    dcterms:creator "Carlos O. Rocha Ochoa" ;
+    dcterms:description """SKOS concept scheme for the pan-Hispanic 
+        financial education thesaurus, derived from a corpus of 57 
+        institutional glossaries from 18 Spanish-speaking countries."""@en .
+
+### ─── Broader concept (stub) ───────────────────────────────────────────────
+
+tpef:deposito_bancario
+    a skos:Concept ;
+    skos:prefLabel "depósito bancario"@es ;
+    skos:prefLabel "bank deposit"@en ;
+    skos:definition """Operación mediante la cual una persona entrega 
+        fondos a una entidad financiera para su custodia y 
+        administración."""@es ;
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:topConceptOf tpef:EsquemaTPEF .
+
+### ─── Core concept ─────────────────────────────────────────────────────────
+
+tpef:cuenta_corriente
+    a skos:Concept ;
+
+    ### Preferred label — pan-Hispanic majority form
+    skos:prefLabel "cuenta corriente"@es ;
+
+    ### Geosynonyms as altLabels with language subtags
+    skos:altLabel "cuenta de cheques"@es-MX ;
+    skos:altLabel "cuenta corriente bancaria"@es-CL ;
+    skos:altLabel "cuenta corriente bancaria"@es-MX ;
+
+    ### Definition — composite from CL (CMF) and MX (BBV)
+    skos:definition """Contrato entre una entidad financiera y una persona 
+        natural o jurídica mediante el cual el titular deposita dinero 
+        y puede disponer de él de forma inmediata, habitualmente a través 
+        de cheques, tarjeta de débito o transferencias."""@es ;
+
+    ### Scope note documenting diatopic distribution
+    skos:scopeNote """'Cuenta de cheques' es la denominación característica 
+        de los recursos mexicanos (PNIF). 'Cuenta corriente bancaria' 
+        aparece en recursos chilenos (CMF, EST) y en BBVA México como 
+        precisión técnica. El resto del corpus hispanohablante usa 
+        'cuenta corriente' sin calificativo adicional."""@es ;
+
+    ### Scheme and hierarchy
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader tpef:deposito_bancario ;
+    skos:narrower tpef:cuenta_corriente_remunerada ;
+
+    ### Associative relations
+    skos:related tpef:cheque ;
+    skos:related tpef:tarjeta_debito ;
+    skos:related tpef:cuenta_ahorro ;
+    skos:related tpef:sobregiro ;
+
+    ### Source glossaries
+    dcterms:source tpef:glosario_AR_BBV ;
+    dcterms:source tpef:glosario_BO_BCB ;
+    dcterms:source tpef:glosario_CL_CMF ;
+    dcterms:source tpef:glosario_CL_EST ;
+    dcterms:source tpef:glosario_CO_SFC ;
+    dcterms:source tpef:glosario_EC_SBE ;
+    dcterms:source tpef:glosario_ES_FPT ;
+    dcterms:source tpef:glosario_MX_PNIF ;
+    dcterms:source tpef:glosario_PA_BGP ;
+    dcterms:source tpef:glosario_PY_BCP ;
+    dcterms:source tpef:glosario_SV_SSF .
+
+### ─── Narrower concept (stub) ──────────────────────────────────────────────
+
+tpef:cuenta_corriente_remunerada
+    a skos:Concept ;
+    skos:prefLabel "cuenta corriente remunerada"@es ;
+    skos:definition """Modalidad de cuenta corriente que genera intereses 
+        sobre el saldo mantenido."""@es ;
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader tpef:cuenta_corriente .
+
+### ─── Related concepts (stubs) ────────────────────────────────────────────
+
+tpef:cheque
+    a skos:Concept ;
+    skos:prefLabel "cheque"@es ;
+    skos:inScheme tpef:EsquemaTPEF .
+
+tpef:tarjeta_debito
+    a skos:Concept ;
+    skos:prefLabel "tarjeta de débito"@es ;
+    skos:inScheme tpef:EsquemaTPEF .
+
+tpef:cuenta_ahorro
+    a skos:Concept ;
+    skos:prefLabel "cuenta de ahorro"@es ;
+    skos:altLabel "cuenta de ahorros"@es-419 ;
+    skos:inScheme tpef:EsquemaTPEF .
+
+tpef:sobregiro
+    a skos:Concept ;
+    skos:prefLabel "sobregiro"@es ;
+    skos:altLabel "descubierto"@es-ES ;
+    skos:inScheme tpef:EsquemaTPEF .
+
+### ─── Source glossary instances ─────────────────────────────────────────────
+
+tpef:glosario_AR_BBV
+    a dcterms:BibliographicResource ;
+    dcterms:title "Conceptos de educación financiera"@es ;
+    dcterms:publisher "BBVA Argentina" ;
+    dcterms:spatial "AR" .
+
+tpef:glosario_BO_BCB
+    a dcterms:BibliographicResource ;
+    dcterms:title "Glosario financiero"@es ;
+    dcterms:publisher "Banco Central de Bolivia" ;
+    dcterms:spatial "BO" .
+
+tpef:glosario_CL_CMF
+    a dcterms:BibliographicResource ;
+    dcterms:title "Glosario"@es ;
+    dcterms:publisher "Comisión para el Mercado Financiero de Chile" ;
+    dcterms:spatial "CL" .
+
+tpef:glosario_CL_EST
+    a dcterms:BibliographicResource ;
+    dcterms:title "Glosario financiero"@es ;
+    dcterms:publisher "Glossary — Chile (EST)" ;
+    dcterms:spatial "CL" .
+
+tpef:glosario_CO_SFC
+    a dcterms:BibliographicResource ;
+    dcterms:title "Glosario financiero"@es ;
+    dcterms:publisher "Superintendencia Financiera de Colombia" ;
+    dcterms:spatial "CO" .
+
+tpef:glosario_EC_SBE
+    a dcterms:BibliographicResource ;
+    dcterms:title "Glosario financiero"@es ;
+    dcterms:publisher "Superintendencia de Bancos del Ecuador" ;
+    dcterms:spatial "EC" .
+
+tpef:glosario_ES_FPT
+    a dcterms:BibliographicResource ;
+    dcterms:title "Glosario — Finanzas para todos"@es ;
+    dcterms:publisher "Banco de España / CNMV" ;
+    dcterms:spatial "ES" .
+
+tpef:glosario_MX_PNIF
+    a dcterms:BibliographicResource ;
+    dcterms:title "Glosario — Plan Nacional de Inclusión Financiera"@es ;
+    dcterms:publisher "CONAIF — México" ;
+    dcterms:spatial "MX" .
+
+tpef:glosario_PA_BGP
+    a dcterms:BibliographicResource ;
+    dcterms:title "Glosario financiero"@es ;
+    dcterms:publisher "Banco General de Panamá" ;
+    dcterms:spatial "PA" .
+
+tpef:glosario_PY_BCP
+    a dcterms:BibliographicResource ;
+    dcterms:title "Glosario financiero"@es ;
+    dcterms:publisher "Banco Central del Paraguay" ;
+    dcterms:spatial "PY" .
+
+tpef:glosario_SV_SSF
+    a dcterms:BibliographicResource ;
+    dcterms:title "Glosario financiero"@es ;
+    dcterms:publisher "Superintendencia del Sistema Financiero de El Salvador" ;
+    dcterms:spatial "SV" .

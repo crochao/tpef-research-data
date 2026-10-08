@@ -1,0 +1,101 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex:    <http://example.org/tpef#> .
+
+<http://example.org/tpef>
+    a owl:Ontology , skos:ConceptScheme ;
+    rdfs:label "TPEF - Ejemplo de jerarquía crédito/hipoteca (6.5.2)"@es .
+
+ex:EsquemaTPEF a skos:ConceptScheme ;
+    skos:prefLabel "Esquema de conceptos del TPEF"@es .
+
+#################################################################
+# Nivel 1 — Colección temática (subdominio)
+# skos:Collection agrupa conceptos con fines de organización y
+# presentación; no establece semántica de amplitud/especificidad,
+# por lo que "crédito" no lleva skos:broader hacia esta colección.
+# Alternativa: si se prefiere una jerarquía skos:broader/narrower
+# completa de cuatro niveles (como en el árbol conceptual de 6.5.2),
+# ex:CrePre debería modelarse como skos:Concept con skos:narrower
+# ex:Credito, y ex:Credito con skos:broader ex:CrePre recíproco.
+#################################################################
+
+ex:CrePre a skos:Collection ;
+    skos:prefLabel "CrePre (colección temática)"@es ;
+    skos:member ex:Credito .
+
+#################################################################
+# Nivel 2
+#################################################################
+
+ex:Credito a skos:Concept ;
+    skos:prefLabel "crédito"@es ;
+    skos:definition "Operación financiera mediante la cual una entidad pone a disposición de una persona natural o jurídica una determinada cantidad de dinero, o le concede la facultad de disponer de ella, con la obligación de restituirla en el plazo pactado, generalmente con el pago de un interés."@es ;
+    skos:inScheme ex:EsquemaTPEF ;
+    skos:narrower ex:CreditoHipotecario .
+
+#################################################################
+# Nivel 3
+#################################################################
+
+ex:CreditoHipotecario a skos:Concept ;
+    skos:prefLabel "crédito hipotecario"@es ;
+    skos:definition "Crédito destinado a la adquisición, construcción o remodelación de una vivienda u otro bien inmueble, garantizado mediante hipoteca sobre el propio bien."@es ;
+    skos:inScheme ex:EsquemaTPEF ;
+    skos:broader ex:Credito ;
+    skos:related ex:Hipoteca .
+
+ex:Hipoteca a skos:Concept ;
+    skos:prefLabel "hipoteca"@es ;
+    skos:definition "Derecho real de garantía constituido sobre un bien inmueble para asegurar el cumplimiento de una obligación, generalmente crediticia, que faculta al acreedor a promover la venta del bien en caso de incumplimiento."@es ;
+    skos:inScheme ex:EsquemaTPEF ;
+    skos:related ex:CreditoHipotecario ;
+    skos:narrower ex:HipotecaEnDivisas ,
+                  ex:HipotecaFija ,
+                  ex:HipotecaInversa ,
+                  ex:HipotecaMultidivisas ,
+                  ex:HipotecaSubordinada ,
+                  ex:HipotecaVariable ;
+    skos:scopeNote "Los seis hipónimos de nivel 4 proceden en su totalidad de un único glosario del corpus (ES-BINT); ilustran el máximo alcanzado por un recurso concreto, no un patrón generalizado (véase 6.5.2)."@es .
+
+#################################################################
+# Nivel 4 (hipónimos de "hipoteca")
+#################################################################
+
+ex:HipotecaEnDivisas a skos:Concept ;
+    skos:prefLabel "hipoteca en divisas"@es ;
+    skos:definition "Hipoteca cuyo capital se referencia a una divisa distinta de aquella en la que el prestatario percibe sus ingresos habituales."@es ;
+    skos:inScheme ex:EsquemaTPEF ;
+    skos:broader ex:Hipoteca .
+
+ex:HipotecaFija a skos:Concept ;
+    skos:prefLabel "hipoteca fija"@es ;
+    skos:definition "Hipoteca cuyo tipo de interés permanece invariable durante toda la vida del préstamo."@es ;
+    skos:inScheme ex:EsquemaTPEF ;
+    skos:broader ex:Hipoteca .
+
+ex:HipotecaInversa a skos:Concept ;
+    skos:prefLabel "hipoteca inversa"@es ;
+    skos:definition "Crédito garantizado con hipoteca sobre la vivienda habitual del solicitante, generalmente una persona mayor, que percibe una renta periódica sin obligación de devolución en vida."@es ;
+    skos:inScheme ex:EsquemaTPEF ;
+    skos:broader ex:Hipoteca .
+
+ex:HipotecaMultidivisas a skos:Concept ;
+    skos:prefLabel "hipoteca multidivisas"@es ;
+    skos:definition "Hipoteca que permite al prestatario cambiar la divisa de referencia del préstamo a lo largo de su vigencia."@es ;
+    skos:inScheme ex:EsquemaTPEF ;
+    skos:broader ex:Hipoteca .
+
+ex:HipotecaSubordinada a skos:Concept ;
+    skos:prefLabel "hipoteca subordinada"@es ;
+    skos:definition "Hipoteca cuyo rango de prelación cede frente a otra hipoteca posterior sobre el mismo bien, generalmente para facilitar la financiación de una promoción inmobiliaria."@es ;
+    skos:inScheme ex:EsquemaTPEF ;
+    skos:broader ex:Hipoteca .
+
+ex:HipotecaVariable a skos:Concept ;
+    skos:prefLabel "hipoteca variable"@es ;
+    skos:definition "Hipoteca cuyo tipo de interés se revisa periódicamente en función de un índice de referencia."@es ;
+    skos:inScheme ex:EsquemaTPEF ;
+    skos:broader ex:Hipoteca .

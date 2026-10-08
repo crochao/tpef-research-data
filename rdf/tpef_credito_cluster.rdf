@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/tasa_interes_fija">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es-419">tasa de interés fija</skos:prefLabel>
+    <skos:altLabel xml:lang="es">tasa fija</skos:altLabel>
+    <skos:altLabel xml:lang="es-ES">tipo de interés fijo</skos:altLabel>
+    <skos:definition xml:lang="es">Tasa de interés pactada en el contrato que permanece 
+        constante durante toda la vigencia de la operación 
+        financiera.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/tasa_interes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/credito_consumo">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">crédito de consumo</skos:prefLabel>
+    <skos:altLabel xml:lang="es-ES">crédito al consumo</skos:altLabel>
+    <skos:definition xml:lang="es">Crédito concedido a una persona natural para 
+        financiar la adquisición de bienes de consumo o el pago de 
+        servicios, amortizable en cuotas sucesivas.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/credito"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/amortizacion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/prenda">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">prenda</skos:prefLabel>
+    <skos:definition xml:lang="es">Garantía real constituida sobre un bien mueble 
+        para asegurar el cumplimiento de una obligación.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/garantia_real"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/credito_comercial">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">crédito comercial</skos:prefLabel>
+    <skos:definition xml:lang="es">Crédito destinado a financiar actividades 
+        productivas, comerciales o de servicios de personas 
+        jurídicas o naturales con actividad económica.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/credito"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/tasa_interes_variable">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es-419">tasa de interés variable</skos:prefLabel>
+    <skos:altLabel xml:lang="es">tasa variable</skos:altLabel>
+    <skos:altLabel xml:lang="es-ES">tipo de interés variable</skos:altLabel>
+    <skos:definition xml:lang="es">Tasa de interés que se ajusta periódicamente en 
+        función de un índice de referencia previamente pactado.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/tasa_interes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/producto_financiero">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">producto financiero</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">financial product</skos:prefLabel>
+    <skos:definition xml:lang="es">Instrumento o servicio ofrecido por una entidad 
+        financiera para satisfacer las necesidades de financiación, 
+        ahorro, inversión o cobertura de riesgo de sus clientes.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:topConceptOf rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/credito"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/credito">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">crédito</skos:prefLabel>
+    <skos:altLabel xml:lang="es">préstamo</skos:altLabel>
+    <skos:definition xml:lang="es">Operación financiera en la que una entidad financiera 
+        entrega a una persona natural o jurídica una cantidad de dinero, 
+        con la condición de que sea devuelta junto con los intereses 
+        pactados en un plazo determinado.</skos:definition>
+    <skos:scopeNote xml:lang="es">Los términos 'crédito' y 'préstamo' se usan 
+        frecuentemente como sinónimos en los glosarios del corpus, 
+        aunque en algunos contextos jurídicos y contables se distinguen: 
+        el préstamo implica entrega efectiva de una cantidad fija, 
+        mientras que el crédito puede implicar una línea disponible 
+        sin desembolso total inmediato.</skos:scopeNote>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/producto_financiero"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/credito_hipotecario"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/credito_consumo"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/credito_personal"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/credito_comercial"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/tasa_interes"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/garantia"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/amortizacion"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/plazo"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/acreedor"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/deudor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/credito_hipotecario">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es-419">crédito hipotecario</skos:prefLabel>
+    <skos:altLabel xml:lang="es-ES">préstamo hipotecario</skos:altLabel>
+    <skos:altLabel xml:lang="es-AR">préstamo hipotecario</skos:altLabel>
+    <skos:definition xml:lang="es">Crédito concedido para la adquisición de bienes 
+        inmuebles, garantizado mediante hipoteca sobre el 
+        bien financiado.</skos:definition>
+    <skos:scopeNote xml:lang="es">'Crédito hipotecario' predomina en BO, CL, CO, MX 
+        y Centroamérica. 'Préstamo hipotecario' es la forma preferida 
+        en AR (BCRA) y en los recursos españoles.</skos:scopeNote>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/credito"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/hipoteca"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/garantia_real"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/participante_operacion_financiera">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">participante en operación financiera</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">financial transaction participant</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:topConceptOf rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/acreedor"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/deudor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/acreedor">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">acreedor</skos:prefLabel>
+    <skos:definition xml:lang="es">Persona física o jurídica que tiene derecho a 
+        reclamar el cobro de una suma de dinero o el cumplimiento 
+        de una obligación.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/participante_operacion_financiera"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/credito"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/deudor"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/garantia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:label xml:lang="es">Tesauro Panhispánico de Educación Financiera (TPEF)</rdfs:label>
+    <rdfs:label xml:lang="en">Pan-Hispanic Financial Education Thesaurus (TPEF)</rdfs:label>
+    <dcterms:creator>Carlos O. Rocha Ochoa</dcterms:creator>
+    <dcterms:description xml:lang="en">Partial SKOS concept scheme illustrating the 
+        credit cluster: hierarchical, associative, synonymic and 
+        geosynonymic relations in the pan-Hispanic financial education 
+        thesaurus.</dcterms:description>
+    <dcterms:language>es</dcterms:language>
+    <owl:versionInfo>0.1-example</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/deudor">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">deudor</skos:prefLabel>
+    <skos:definition xml:lang="es">Persona física o jurídica obligada a satisfacer 
+        una deuda o a cumplir una obligación frente a un 
+        acreedor.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/participante_operacion_financiera"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/credito"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/acreedor"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/garantia"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/amortizacion">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">amortización</skos:prefLabel>
+    <skos:definition xml:lang="es">Devolución gradual del capital de un préstamo 
+        mediante pagos periódicos que incluyen capital 
+        e intereses.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/concepto_financiero_basico"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/credito"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/plazo"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/tasa_interes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/garantia_real">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">garantía real</skos:prefLabel>
+    <skos:definition xml:lang="es">Garantía constituida por bienes tangibles, como 
+        inmuebles o bienes muebles, que el deudor afecta al 
+        cumplimiento de una obligación.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/garantia"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/hipoteca"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/prenda"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/aval">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">aval</skos:prefLabel>
+    <skos:definition xml:lang="es">Compromiso mediante el cual una persona natural 
+        o jurídica se obliga solidariamente con el deudor al 
+        cumplimiento de una obligación ante el acreedor.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/garantia_personal"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/acreedor"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/deudor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/concepto_financiero_basico">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">concepto financiero básico</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">basic financial concept</skos:prefLabel>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:topConceptOf rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/tasa_interes"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/garantia"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/amortizacion"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/plazo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/credito_personal">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es-419">crédito personal</skos:prefLabel>
+    <skos:altLabel xml:lang="es-ES">préstamo personal</skos:altLabel>
+    <skos:altLabel xml:lang="es-AR">préstamo personal</skos:altLabel>
+    <skos:definition xml:lang="es">Crédito concedido a una persona natural sin 
+        afectación específica, con o sin garantía colateral.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/credito"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/garantia_personal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/garantia_personal">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">garantía personal</skos:prefLabel>
+    <skos:definition xml:lang="es">Garantía en la que una persona distinta al deudor 
+        responde con la totalidad de su patrimonio ante el 
+        incumplimiento.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/garantia"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/aval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/plazo">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">plazo</skos:prefLabel>
+    <skos:definition xml:lang="es">Período de tiempo estipulado contractualmente 
+        para el cumplimiento de una obligación financiera.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/concepto_financiero_basico"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/credito"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/amortizacion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/hipoteca">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">hipoteca</skos:prefLabel>
+    <skos:definition xml:lang="es">Derecho real que grava un bien inmueble para 
+        garantizar el cumplimiento de una obligación, sin que el 
+        deudor pierda la posesión del bien.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/garantia_real"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/credito_hipotecario"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/tasa_interes">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">tasa de interés</skos:prefLabel>
+    <skos:altLabel xml:lang="es-ES">tipo de interés</skos:altLabel>
+    <skos:definition xml:lang="es">Porcentaje aplicado sobre el capital prestado o 
+        depositado que determina el costo del crédito o el rendimiento 
+        del ahorro durante un período determinado.</skos:definition>
+    <skos:scopeNote xml:lang="es">'Tasa de interés' aparece en 28 glosarios del corpus 
+        abarcando toda el área hispanohablante. 'Tipo de interés' es la 
+        forma preferida en ES (BBV, BES, BIN, CNMV, FPT, TUR, UNI) 
+        y aparece también en MX (CIB).</skos:scopeNote>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/concepto_financiero_basico"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/tasa_interes_fija"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/tasa_interes_variable"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/credito"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/amortizacion"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/garantia">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">garantía</skos:prefLabel>
+    <skos:definition xml:lang="es">Bienes o derechos entregados por el deudor como 
+        respaldo para asegurar al acreedor el cobro del monto 
+        prestado.</skos:definition>
+    <skos:inScheme rdf:resource="https://w3id.org/tpef/concepts/EsquemaTPEF"/>
+    <skos:broader rdf:resource="https://w3id.org/tpef/concepts/concepto_financiero_basico"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/garantia_real"/>
+    <skos:narrower rdf:resource="https://w3id.org/tpef/concepts/garantia_personal"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/credito"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/deudor"/>
+    <skos:related rdf:resource="https://w3id.org/tpef/concepts/acreedor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/tpef/concepts/EsquemaTPEF">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <skos:prefLabel xml:lang="es">Tesauro Panhispánico de Educación Financiera</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Pan-Hispanic Financial Education Thesaurus</skos:prefLabel>
+    <skos:hasTopConcept rdf:resource="https://w3id.org/tpef/concepts/producto_financiero"/>
+    <skos:hasTopConcept rdf:resource="https://w3id.org/tpef/concepts/concepto_financiero_basico"/>
+    <skos:hasTopConcept rdf:resource="https://w3id.org/tpef/concepts/participante_operacion_financiera"/>
+    <dcterms:creator>Carlos O. Rocha Ochoa</dcterms:creator>
+  </rdf:Description>
+</rdf:RDF>

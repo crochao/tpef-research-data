@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use these data, scripts, or SKOS examples, please cite this release."
+title: "TPEF: consolidated terminology data, analysis scripts, and SKOS prototype"
+type: dataset
+version: 1.0.0
+date-released: 2026-10-08
+doi: "10.5281/zenodo.22047082"
+url: "https://doi.org/10.5281/zenodo.22047082"
+repository-code: "https://github.com/crochao/tpef-research-data/"
+authors:
+  - family-names: "Rocha Ochoa"
+    given-names: "Carlos O."
+    orcid: "https://orcid.org/0000-0002-2475-6238"
+abstract: >-
+  Research data and computational materials supporting a doctoral study of
+  institutional financial-education glossaries from 18 Spanish-speaking
+  countries. The release contains the normalized and deduplicated lemma
+  inventory, the provisional terminologically consolidated inventory,
+  analysis scripts, a glossary-source manifest, and selected SKOS/RDF samples.
+keywords:
+  - financial education
+  - Spanish terminology
+  - terminography
+  - pluricentric Spanish
+  - knowledge organization
+  - SKOS
+  - linguistic linked data
+  - FAIR data
+  - natural language processing
+preferred-citation:
+  type: dataset
+  title: "TPEF: consolidated terminology data, analysis scripts, and SKOS prototype"
+  version: 1.0.0
+  year: 2026
+  authors:
+    - family-names: "Rocha Ochoa"
+      given-names: "Carlos O."
+      orcid: "https://orcid.org/0000-0002-2475-6238"
+  doi: "10.5281/zenodo.22047082"
+  url: "https://doi.org/10.5281/zenodo.22047082"

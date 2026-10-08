@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="http://example.org/tpef#HipotecaVariable">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">hipoteca variable</skos:prefLabel>
+    <skos:definition xml:lang="es">Hipoteca cuyo tipo de interés se revisa periódicamente en función de un índice de referencia.</skos:definition>
+    <skos:inScheme rdf:resource="http://example.org/tpef#EsquemaTPEF"/>
+    <skos:broader rdf:resource="http://example.org/tpef#Hipoteca"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/tpef#HipotecaFija">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">hipoteca fija</skos:prefLabel>
+    <skos:definition xml:lang="es">Hipoteca cuyo tipo de interés permanece invariable durante toda la vida del préstamo.</skos:definition>
+    <skos:inScheme rdf:resource="http://example.org/tpef#EsquemaTPEF"/>
+    <skos:broader rdf:resource="http://example.org/tpef#Hipoteca"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/tpef#HipotecaEnDivisas">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">hipoteca en divisas</skos:prefLabel>
+    <skos:definition xml:lang="es">Hipoteca cuyo capital se referencia a una divisa distinta de aquella en la que el prestatario percibe sus ingresos habituales.</skos:definition>
+    <skos:inScheme rdf:resource="http://example.org/tpef#EsquemaTPEF"/>
+    <skos:broader rdf:resource="http://example.org/tpef#Hipoteca"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/tpef#Hipoteca">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">hipoteca</skos:prefLabel>
+    <skos:definition xml:lang="es">Derecho real de garantía constituido sobre un bien inmueble para asegurar el cumplimiento de una obligación, generalmente crediticia, que faculta al acreedor a promover la venta del bien en caso de incumplimiento.</skos:definition>
+    <skos:inScheme rdf:resource="http://example.org/tpef#EsquemaTPEF"/>
+    <skos:related rdf:resource="http://example.org/tpef#CreditoHipotecario"/>
+    <skos:narrower rdf:resource="http://example.org/tpef#HipotecaEnDivisas"/>
+    <skos:narrower rdf:resource="http://example.org/tpef#HipotecaFija"/>
+    <skos:narrower rdf:resource="http://example.org/tpef#HipotecaInversa"/>
+    <skos:narrower rdf:resource="http://example.org/tpef#HipotecaMultidivisas"/>
+    <skos:narrower rdf:resource="http://example.org/tpef#HipotecaSubordinada"/>
+    <skos:narrower rdf:resource="http://example.org/tpef#HipotecaVariable"/>
+    <skos:scopeNote xml:lang="es">Los seis hipónimos de nivel 4 proceden en su totalidad de un único glosario del corpus (ES-BINT); ilustran el máximo alcanzado por un recurso concreto, no un patrón generalizado (véase 6.5.2).</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/tpef#CreditoHipotecario">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">crédito hipotecario</skos:prefLabel>
+    <skos:definition xml:lang="es">Crédito destinado a la adquisición, construcción o remodelación de una vivienda u otro bien inmueble, garantizado mediante hipoteca sobre el propio bien.</skos:definition>
+    <skos:inScheme rdf:resource="http://example.org/tpef#EsquemaTPEF"/>
+    <skos:broader rdf:resource="http://example.org/tpef#Credito"/>
+    <skos:related rdf:resource="http://example.org/tpef#Hipoteca"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/tpef#HipotecaMultidivisas">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">hipoteca multidivisas</skos:prefLabel>
+    <skos:definition xml:lang="es">Hipoteca que permite al prestatario cambiar la divisa de referencia del préstamo a lo largo de su vigencia.</skos:definition>
+    <skos:inScheme rdf:resource="http://example.org/tpef#EsquemaTPEF"/>
+    <skos:broader rdf:resource="http://example.org/tpef#Hipoteca"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/tpef#HipotecaSubordinada">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">hipoteca subordinada</skos:prefLabel>
+    <skos:definition xml:lang="es">Hipoteca cuyo rango de prelación cede frente a otra hipoteca posterior sobre el mismo bien, generalmente para facilitar la financiación de una promoción inmobiliaria.</skos:definition>
+    <skos:inScheme rdf:resource="http://example.org/tpef#EsquemaTPEF"/>
+    <skos:broader rdf:resource="http://example.org/tpef#Hipoteca"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/tpef#EsquemaTPEF">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <skos:prefLabel xml:lang="es">Esquema de conceptos del TPEF</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/tpef#Credito">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">crédito</skos:prefLabel>
+    <skos:definition xml:lang="es">Operación financiera mediante la cual una entidad pone a disposición de una persona natural o jurídica una determinada cantidad de dinero, o le concede la facultad de disponer de ella, con la obligación de restituirla en el plazo pactado, generalmente con el pago de un interés.</skos:definition>
+    <skos:inScheme rdf:resource="http://example.org/tpef#EsquemaTPEF"/>
+    <skos:narrower rdf:resource="http://example.org/tpef#CreditoHipotecario"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/tpef#HipotecaInversa">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:prefLabel xml:lang="es">hipoteca inversa</skos:prefLabel>
+    <skos:definition xml:lang="es">Crédito garantizado con hipoteca sobre la vivienda habitual del solicitante, generalmente una persona mayor, que percibe una renta periódica sin obligación de devolución en vida.</skos:definition>
+    <skos:inScheme rdf:resource="http://example.org/tpef#EsquemaTPEF"/>
+    <skos:broader rdf:resource="http://example.org/tpef#Hipoteca"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/tpef#CrePre">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+    <skos:prefLabel xml:lang="es">CrePre (colección temática)</skos:prefLabel>
+    <skos:member rdf:resource="http://example.org/tpef#Credito"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://example.org/tpef">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <rdfs:label xml:lang="es">TPEF - Ejemplo de jerarquía crédito/hipoteca (6.5.2)</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>

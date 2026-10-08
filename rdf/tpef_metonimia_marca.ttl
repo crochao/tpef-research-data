@@ -1,0 +1,60 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix tpef:  <http://tpef.example.org/esquema#> .
+
+<http://tpef.example.org/esquema>
+    a owl:Ontology , skos:ConceptScheme ;
+    rdfs:label "TPEF - Ejemplo de metonimia de marca (6.4.3)"@es ;
+    rdfs:comment "Modelización de la coexistencia entre nombres de marca opacos (Veraz, DICOM, ASNEF) y nombres de marca lexicalizados como término genérico (datacrédito), dentro del clúster del registro de riesgo crediticio."@es .
+
+tpef:EsquemaTPEF a skos:ConceptScheme ;
+    skos:prefLabel "Esquema de conceptos del TPEF"@es .
+
+#################################################################
+# Concepto genérico: registro de riesgo crediticio
+# Reúne las cuatro denominaciones descriptivas confirmadas como
+# geosinónimos en 6.4.3 (clúster 5), incluida "datacrédito" como
+# altLabel porque su uso ya está generificado en el habla corriente.
+#################################################################
+
+tpef:central_de_riesgo_crediticio a skos:Concept ;
+    skos:prefLabel "central de riesgo crediticio"@es ;
+    skos:altLabel "boletín comercial"@es , "buró de crédito"@es , "datacrédito"@es ;
+    skos:definition "Registro que recopila y consulta el historial de cumplimiento de las obligaciones crediticias de una persona natural o jurídica, empleado por las entidades financieras para evaluar el riesgo de un solicitante de crédito."@es ;
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:scopeNote "Denominación descriptiva de uso extendido, documentada como geosinónimo en cuatro variedades: 'boletín comercial' (Chile), 'buró de crédito' (República Dominicana y México), 'central de riesgo' y 'datacrédito' (Colombia). Verificado en esTenTen23 con índice de asimetría diatópica de 0,87-0,98 (véase B.3)."@es ;
+    skos:usageNote "'Datacrédito' se incluye como altLabel, y no como término relacionado, porque su origen como nombre de marca (la empresa colombiana homónima) se encuentra ya lexicalizado en el uso corriente: los hablantes colombianos emplean la voz para referirse al concepto genérico de registro de riesgo crediticio, no exclusivamente a la empresa que le da nombre. Contrástese con Veraz, DICOM y ASNEF, modelados por separado como entidades opacas (véase tpef:veraz, tpef:dicom, tpef:asnef)."@es .
+
+#################################################################
+# Nombres de marca todavía opacos
+# Se modelan como conceptos propios, vinculados por skos:related
+# al concepto genérico (nunca como skos:altLabel), acompañados de
+# una nota de uso que documenta el estadio de generificación.
+#################################################################
+
+tpef:veraz a skos:Concept ;
+    skos:prefLabel "Veraz"@es ;
+    skos:definition "Base de datos privada de información crediticia y comercial de Argentina, gestionada por Equifax, consultada por las entidades financieras para evaluar la solvencia de un solicitante de crédito."@es ;
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:related tpef:central_de_riesgo_crediticio ;
+    skos:scopeNote "Nombre comercial de una empresa privada argentina (Equifax Veraz), no denominación genérica del concepto."@es ;
+    skos:usageNote "En el habla corriente argentina se emplea con frecuencia de forma metonímica ('estar en Veraz', 'salir de Veraz') para referirse al hecho de figurar en un registro de morosidad, sin que ello implique que el término se haya generificado por completo: a diferencia de 'datacrédito' en Colombia, 'Veraz' conserva la referencia primaria a la empresa y no sustituye plenamente a la denominación genérica en el registro institucional. Se modela como skos:related al concepto genérico y no como su altLabel."@es .
+
+tpef:dicom a skos:Concept ;
+    skos:prefLabel "DICOM"@es ;
+    skos:definition "Boletín de información comercial de Chile, gestionado por Equifax, que registra los incumplimientos de pago de personas naturales y jurídicas."@es ;
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:related tpef:central_de_riesgo_crediticio ;
+    skos:scopeNote "Nombre comercial de un producto de información crediticia de Equifax Chile, no denominación genérica del concepto."@es ;
+    skos:usageNote "Al igual que Veraz en Argentina, se usa coloquialmente en construcciones metonímicas ('estar en DICOM') sin haber desplazado por completo a la denominación descriptiva 'boletín comercial', que es la que efectivamente se documenta como geosinónimo en el corpus institucional chileno. Se modela como skos:related y no como altLabel del concepto genérico."@es .
+
+tpef:asnef a skos:Concept ;
+    skos:prefLabel "ASNEF"@es ;
+    skos:definition "Asociación Nacional de Entidades de Financiación, entidad española que gestiona uno de los principales ficheros de morosidad del país (ASNEF-Equifax)."@es ;
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:related tpef:central_de_riesgo_crediticio ;
+    skos:scopeNote "Sigla del nombre de una asociación empresarial española que gestiona un fichero de morosidad; no es, en sentido estricto, sinónimo del concepto genérico, sino el nombre de la entidad gestora de uno de sus ficheros más conocidos."@es ;
+    skos:usageNote "Se usa metonímicamente en España ('estar en ASNEF', 'salir de ASNEF') con el mismo patrón que Veraz y DICOM. No se registra como altLabel del concepto genérico porque el corpus TPEF documenta para España la forma descriptiva propia del sistema financiero español, no la sigla de la asociación."@es .

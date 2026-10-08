@@ -1,0 +1,378 @@
+@prefix tpef:    <https://w3id.org/tpef/concepts/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+### ═══════════════════════════════════════════════════════════════════════════
+### TPEF — Partial concept map: crédito cluster
+### Illustrates: hierarchical (broader/narrower), associative (related),
+###              synonymy (altLabel), and geosynonymy (altLabel + lang subtag)
+### ═══════════════════════════════════════════════════════════════════════════
+
+### ─── Ontology declaration ──────────────────────────────────────────────────
+
+<https://w3id.org/tpef/>
+    a owl:Ontology ;
+    rdfs:label "Tesauro Panhispánico de Educación Financiera (TPEF)"@es ;
+    rdfs:label "Pan-Hispanic Financial Education Thesaurus (TPEF)"@en ;
+    dcterms:creator "Carlos O. Rocha Ochoa" ;
+    dcterms:description """Partial SKOS concept scheme illustrating the 
+        credit cluster: hierarchical, associative, synonymic and 
+        geosynonymic relations in the pan-Hispanic financial education 
+        thesaurus."""@en ;
+    dcterms:language "es" ;
+    owl:versionInfo "0.1-example" .
+
+### ─── Concept scheme ────────────────────────────────────────────────────────
+
+tpef:EsquemaTPEF
+    a skos:ConceptScheme ;
+    skos:prefLabel "Tesauro Panhispánico de Educación Financiera"@es ;
+    skos:prefLabel "Pan-Hispanic Financial Education Thesaurus"@en ;
+    skos:hasTopConcept tpef:producto_financiero ;
+    skos:hasTopConcept tpef:concepto_financiero_basico ;
+    skos:hasTopConcept tpef:participante_operacion_financiera ;
+    dcterms:creator "Carlos O. Rocha Ochoa" .
+
+### ═══════════════════════════════════════════════════════════════════════════
+### LEVEL 0 — Top concepts (stubs)
+### ═══════════════════════════════════════════════════════════════════════════
+
+tpef:producto_financiero
+    a skos:Concept ;
+    skos:prefLabel "producto financiero"@es ;
+    skos:prefLabel "financial product"@en ;
+    skos:definition """Instrumento o servicio ofrecido por una entidad 
+        financiera para satisfacer las necesidades de financiación, 
+        ahorro, inversión o cobertura de riesgo de sus clientes."""@es ;
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:topConceptOf tpef:EsquemaTPEF ;
+    skos:narrower tpef:credito .
+
+tpef:concepto_financiero_basico
+    a skos:Concept ;
+    skos:prefLabel "concepto financiero básico"@es ;
+    skos:prefLabel "basic financial concept"@en ;
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:topConceptOf tpef:EsquemaTPEF ;
+    skos:narrower tpef:tasa_interes ;
+    skos:narrower tpef:garantia ;
+    skos:narrower tpef:amortizacion ;
+    skos:narrower tpef:plazo .
+
+tpef:participante_operacion_financiera
+    a skos:Concept ;
+    skos:prefLabel "participante en operación financiera"@es ;
+    skos:prefLabel "financial transaction participant"@en ;
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:topConceptOf tpef:EsquemaTPEF ;
+    skos:narrower tpef:acreedor ;
+    skos:narrower tpef:deudor .
+
+### ═══════════════════════════════════════════════════════════════════════════
+### LEVEL 1 — Core concept: crédito / préstamo (functional synonymy)
+### ═══════════════════════════════════════════════════════════════════════════
+
+tpef:credito
+    a skos:Concept ;
+
+    ### Preferred label + functional synonym
+    skos:prefLabel "crédito"@es ;
+    skos:altLabel  "préstamo"@es ;
+
+    skos:definition """Operación financiera en la que una entidad financiera 
+        entrega a una persona natural o jurídica una cantidad de dinero, 
+        con la condición de que sea devuelta junto con los intereses 
+        pactados en un plazo determinado."""@es ;
+
+    skos:scopeNote """Los términos 'crédito' y 'préstamo' se usan 
+        frecuentemente como sinónimos en los glosarios del corpus, 
+        aunque en algunos contextos jurídicos y contables se distinguen: 
+        el préstamo implica entrega efectiva de una cantidad fija, 
+        mientras que el crédito puede implicar una línea disponible 
+        sin desembolso total inmediato."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+
+    ### Hierarchical — upward
+    skos:broader tpef:producto_financiero ;
+
+    ### Hierarchical — downward
+    skos:narrower tpef:credito_hipotecario ;
+    skos:narrower tpef:credito_consumo ;
+    skos:narrower tpef:credito_personal ;
+    skos:narrower tpef:credito_comercial ;
+
+    ### Associative
+    skos:related tpef:tasa_interes ;
+    skos:related tpef:garantia ;
+    skos:related tpef:amortizacion ;
+    skos:related tpef:plazo ;
+    skos:related tpef:acreedor ;
+    skos:related tpef:deudor .
+
+### ═══════════════════════════════════════════════════════════════════════════
+### LEVEL 2 — Narrower: types of credit (with geosynonymy)
+### ═══════════════════════════════════════════════════════════════════════════
+
+tpef:credito_hipotecario
+    a skos:Concept ;
+
+    ### Geosynonymy: preferred form in Hispanic America vs. Spain + Argentina
+    skos:prefLabel "crédito hipotecario"@es-419 ;
+    skos:altLabel  "préstamo hipotecario"@es-ES ;
+    skos:altLabel  "préstamo hipotecario"@es-AR ;
+
+    skos:definition """Crédito concedido para la adquisición de bienes 
+        inmuebles, garantizado mediante hipoteca sobre el 
+        bien financiado."""@es ;
+
+    skos:scopeNote """'Crédito hipotecario' predomina en BO, CL, CO, MX 
+        y Centroamérica. 'Préstamo hipotecario' es la forma preferida 
+        en AR (BCRA) y en los recursos españoles."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:credito ;
+    skos:related  tpef:hipoteca ;
+    skos:related  tpef:garantia_real .
+
+tpef:credito_consumo
+    a skos:Concept ;
+    skos:prefLabel "crédito de consumo"@es ;
+    skos:altLabel  "crédito al consumo"@es-ES ;
+
+    skos:definition """Crédito concedido a una persona natural para 
+        financiar la adquisición de bienes de consumo o el pago de 
+        servicios, amortizable en cuotas sucesivas."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:credito ;
+    skos:related  tpef:amortizacion .
+
+tpef:credito_personal
+    a skos:Concept ;
+
+    ### Geosynonymy
+    skos:prefLabel "crédito personal"@es-419 ;
+    skos:altLabel  "préstamo personal"@es-ES ;
+    skos:altLabel  "préstamo personal"@es-AR ;
+
+    skos:definition """Crédito concedido a una persona natural sin 
+        afectación específica, con o sin garantía colateral."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:credito ;
+    skos:related  tpef:garantia_personal .
+
+tpef:credito_comercial
+    a skos:Concept ;
+    skos:prefLabel "crédito comercial"@es ;
+
+    skos:definition """Crédito destinado a financiar actividades 
+        productivas, comerciales o de servicios de personas 
+        jurídicas o naturales con actividad económica."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:credito .
+
+### ═══════════════════════════════════════════════════════════════════════════
+### LEVEL 2 — Related: tasa de interés (with geosynonymy)
+### ═══════════════════════════════════════════════════════════════════════════
+
+tpef:tasa_interes
+    a skos:Concept ;
+
+    ### Geosynonymy: pan-Hispanic vs. Spain
+    skos:prefLabel "tasa de interés"@es ;
+    skos:altLabel  "tipo de interés"@es-ES ;
+
+    skos:definition """Porcentaje aplicado sobre el capital prestado o 
+        depositado que determina el costo del crédito o el rendimiento 
+        del ahorro durante un período determinado."""@es ;
+
+    skos:scopeNote """'Tasa de interés' aparece en 28 glosarios del corpus 
+        abarcando toda el área hispanohablante. 'Tipo de interés' es la 
+        forma preferida en ES (BBV, BES, BIN, CNMV, FPT, TUR, UNI) 
+        y aparece también en MX (CIB)."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:concepto_financiero_basico ;
+    skos:narrower tpef:tasa_interes_fija ;
+    skos:narrower tpef:tasa_interes_variable ;
+    skos:related  tpef:credito ;
+    skos:related  tpef:amortizacion .
+
+### ─── Level 3: types of interest rate ──────────────────────────────────────
+
+tpef:tasa_interes_fija
+    a skos:Concept ;
+    skos:prefLabel "tasa de interés fija"@es-419 ;
+    skos:altLabel  "tasa fija"@es ;
+    skos:altLabel  "tipo de interés fijo"@es-ES ;
+
+    skos:definition """Tasa de interés pactada en el contrato que permanece 
+        constante durante toda la vigencia de la operación 
+        financiera."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:tasa_interes .
+
+tpef:tasa_interes_variable
+    a skos:Concept ;
+    skos:prefLabel "tasa de interés variable"@es-419 ;
+    skos:altLabel  "tasa variable"@es ;
+    skos:altLabel  "tipo de interés variable"@es-ES ;
+
+    skos:definition """Tasa de interés que se ajusta periódicamente en 
+        función de un índice de referencia previamente pactado."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:tasa_interes .
+
+### ═══════════════════════════════════════════════════════════════════════════
+### LEVEL 2 — Related: garantía (with narrowers)
+### ═══════════════════════════════════════════════════════════════════════════
+
+tpef:garantia
+    a skos:Concept ;
+    skos:prefLabel "garantía"@es ;
+
+    skos:definition """Bienes o derechos entregados por el deudor como 
+        respaldo para asegurar al acreedor el cobro del monto 
+        prestado."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:concepto_financiero_basico ;
+    skos:narrower tpef:garantia_real ;
+    skos:narrower tpef:garantia_personal ;
+    skos:related  tpef:credito ;
+    skos:related  tpef:deudor ;
+    skos:related  tpef:acreedor .
+
+tpef:garantia_real
+    a skos:Concept ;
+    skos:prefLabel "garantía real"@es ;
+
+    skos:definition """Garantía constituida por bienes tangibles, como 
+        inmuebles o bienes muebles, que el deudor afecta al 
+        cumplimiento de una obligación."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:garantia ;
+    skos:narrower tpef:hipoteca ;
+    skos:narrower tpef:prenda .
+
+tpef:garantia_personal
+    a skos:Concept ;
+    skos:prefLabel "garantía personal"@es ;
+
+    skos:definition """Garantía en la que una persona distinta al deudor 
+        responde con la totalidad de su patrimonio ante el 
+        incumplimiento."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:garantia ;
+    skos:narrower tpef:aval .
+
+### ─── Level 3: specific guarantee instruments ───────────────────────────────
+
+tpef:hipoteca
+    a skos:Concept ;
+    skos:prefLabel "hipoteca"@es ;
+
+    skos:definition """Derecho real que grava un bien inmueble para 
+        garantizar el cumplimiento de una obligación, sin que el 
+        deudor pierda la posesión del bien."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:garantia_real ;
+    skos:related  tpef:credito_hipotecario .
+
+tpef:prenda
+    a skos:Concept ;
+    skos:prefLabel "prenda"@es ;
+
+    skos:definition """Garantía real constituida sobre un bien mueble 
+        para asegurar el cumplimiento de una obligación."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:garantia_real .
+
+tpef:aval
+    a skos:Concept ;
+    skos:prefLabel "aval"@es ;
+
+    skos:definition """Compromiso mediante el cual una persona natural 
+        o jurídica se obliga solidariamente con el deudor al 
+        cumplimiento de una obligación ante el acreedor."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:garantia_personal ;
+    skos:related  tpef:acreedor ;
+    skos:related  tpef:deudor .
+
+### ═══════════════════════════════════════════════════════════════════════════
+### LEVEL 2 — Related: temporal and financial parameters
+### ═══════════════════════════════════════════════════════════════════════════
+
+tpef:amortizacion
+    a skos:Concept ;
+    skos:prefLabel "amortización"@es ;
+
+    skos:definition """Devolución gradual del capital de un préstamo 
+        mediante pagos periódicos que incluyen capital 
+        e intereses."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:concepto_financiero_basico ;
+    skos:related  tpef:credito ;
+    skos:related  tpef:plazo ;
+    skos:related  tpef:tasa_interes .
+
+tpef:plazo
+    a skos:Concept ;
+    skos:prefLabel "plazo"@es ;
+
+    skos:definition """Período de tiempo estipulado contractualmente 
+        para el cumplimiento de una obligación financiera."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:concepto_financiero_basico ;
+    skos:related  tpef:credito ;
+    skos:related  tpef:amortizacion .
+
+### ═══════════════════════════════════════════════════════════════════════════
+### LEVEL 2 — Related: role concepts
+### ═══════════════════════════════════════════════════════════════════════════
+
+tpef:acreedor
+    a skos:Concept ;
+    skos:prefLabel "acreedor"@es ;
+
+    skos:definition """Persona física o jurídica que tiene derecho a 
+        reclamar el cobro de una suma de dinero o el cumplimiento 
+        de una obligación."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:participante_operacion_financiera ;
+    skos:related  tpef:credito ;
+    skos:related  tpef:deudor ;
+    skos:related  tpef:garantia .
+
+tpef:deudor
+    a skos:Concept ;
+    skos:prefLabel "deudor"@es ;
+
+    skos:definition """Persona física o jurídica obligada a satisfacer 
+        una deuda o a cumplir una obligación frente a un 
+        acreedor."""@es ;
+
+    skos:inScheme tpef:EsquemaTPEF ;
+    skos:broader  tpef:participante_operacion_financiera ;
+    skos:related  tpef:credito ;
+    skos:related  tpef:acreedor ;
+    skos:related  tpef:garantia .
+
